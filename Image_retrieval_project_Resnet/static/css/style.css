@@ -1,0 +1,211 @@
+/* General Styling */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-size: cover;
+    background-color: #0a0f1f;
+    color: #e0e6ed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #1b2a41;
+    color: #e0e6ed;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #4facfe;
+    box-sizing: border-box;
+
+}
+
+header h1 {
+    font-size: 28px;
+    color: #4facfe;
+    margin: 0;
+}
+
+header a {
+    color: #e0e6ed;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header a:hover {
+    background-color: #4facfe;
+    color: #1b2a41;
+}
+
+header .btns {
+    display: flex;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Left Section for Image Upload */
+.left-section {
+    width: 40%;
+    padding: 20px;
+    background-color: rgba(27, 42, 65, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.left-section h2 {
+    font-size: 24px;
+    color: #4facfe;
+    margin-bottom: 20px;
+}
+
+#imageUpload {
+    margin: 20px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #4facfe;
+    border-radius: 8px;
+    background-color: #0a0f1f;
+    color: #e0e6ed;
+}
+
+#imageUpload:focus {
+    outline: none;
+    border: 1px solid #4facfe;
+}
+
+#uploadedImage img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+    border: 2px solid #4facfe;
+}
+
+/* Submit Button */
+button {
+    background-color: #4facfe;
+    color: #0a0f1f;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2e8cf0;
+    transform: translateY(-3px);
+}
+
+/* Right Section for Similar Images and History */
+.right-section {
+    width: 50%;
+    padding: 20px;
+}
+
+/* Results Styling */
+.results {
+    background-color: rgba(27, 42, 65, 0.85);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.results h2 {
+    font-size: 32px;
+    color: #4facfe;
+}
+
+#similarImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#similarImages img {
+    max-width: 150px;
+    margin: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border: 2px solid #4facfe;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#similarImages img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+}
+
+
+.history {
+    background-color: rgba(27, 42, 65, 0.85);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+.history h2 {
+    font-size: 30px;
+    color: #4facfe;
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history ul li {
+    font-size: 18px;
+    color: #e0e6ed;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #4facfe;
+    padding-bottom: 10px;
+}
+
+/* Styling for the Search Button */
+input[type="submit"] {
+    background-color: #4facfe;
+    color: #0a0f1f;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+input[type="submit"]:hover {
+    background-color: #2e8cf0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+}
+
+input[type="submit"]:focus {
+    outline: none;
+    border: 1px solid #4facfe;
+}

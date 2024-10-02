@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Retrieval</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Image Retrieval Results</h1>
+
+    <!-- Form for uploading a query image -->
+    <form method="POST" enctype="multipart/form-data">
+        <label for="query_img">Upload Image:</label>
+        <input type="file" name="query_img" id="query_img" accept="image/*" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Display uploaded query image -->
+    {% if query_path %}
+    <div>
+        <h2>Query Image:</h2>
+        <img src="{{ url_for('static', filename=query_path) }}" alt="Query Image" style="max-width: 300px; max-height: 300px;">
+    </div>
+    {% endif %}
+
+    <!-- Display similar images -->
+    {% if result_paths %}
+    <div>
+        <h2>Similar Images:</h2>
+        <div style="display: flex; gap: 10px;">
+            {% for result_path in result_paths %}
+            <div>
+                <img src="{{ url_for('static', filename='img/' + result_path.name) }}" alt="Similar Image" style="max-width: 150px; max-height: 150px;">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- In case of no results -->
+    {% if not result_paths and query_path %}
+    <div>
+        <p>No similar images found.</p>
+    </div>
+    {% endif %}
+    
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
